@@ -22,7 +22,8 @@ module.exports = function (command, switches) {
     if (typeof command !== 'string') {
       return reject(new Error('Command must be a string'));
     }
-    var cmd  = command.split(' ')[0];
+    //var cmd  = command.split(' ')[0];
+    var cmd  = __dirname + "/../../../" + command.split(' ')[0];
     var args = [ command.split(' ')[1] ];
 
     // Parse and add command (non-switches parameters) to `args`.
